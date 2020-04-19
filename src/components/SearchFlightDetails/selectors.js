@@ -1,12 +1,13 @@
 import { createSelector } from "reselect";
 import get from "lodash/get";
 
-const selectShow = (state) => state;
+const selectFlight = (state) => state;
 
-const makeSelectShow = () => createSelector(selectShow, (substate) => substate);
+const makeSelectFlight = () =>
+  createSelector(selectFlight, (substate) => substate);
 
 const makeSelectIsLoading = () =>
-  createSelector(selectShow, (substate) =>
+  createSelector(selectFlight, (substate) =>
     get(substate, "getFlights.isLoading", null),
   );
 
@@ -41,7 +42,7 @@ const makeSelectFlights = () =>
   });
 
 export {
-  makeSelectShow,
+  makeSelectFlight,
   makeSelectIsLoading,
   makeSelectFlights,
   makeSelectError,

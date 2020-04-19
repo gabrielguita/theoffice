@@ -19,7 +19,6 @@ import {
 } from "./styles";
 
 import {
-  makeSelectShow,
   makeSelectIsLoading,
   makeSelectFlights,
   makeSelectError,
@@ -217,7 +216,6 @@ const SearchFlightDetails = (props) => {
 };
 
 SearchFlightDetails.propTypes = {
-  show: PropTypes.object,
   searchFlightAction: PropTypes.func,
   searchFlight: PropTypes.func,
   isLoading: PropTypes.bool,
@@ -226,7 +224,6 @@ SearchFlightDetails.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  show: makeSelectShow(),
   isLoading: makeSelectIsLoading(),
   flights: makeSelectFlights(),
   hasError: makeSelectError(),

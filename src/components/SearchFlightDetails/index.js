@@ -182,20 +182,20 @@ const SearchFlightDetails = (props) => {
               <p>To: {flight.cityTo} </p>
               <p>
                 Departure:{" "}
-                {moment.unix(flight.dTimeUTC).format("YYYY-MM-DD HH:mm")}
+                {moment.unix(flight.dTimeUTC).format("DD/MM/YYYY HH:mm")}
               </p>
               <p>
                 Arrivals:{" "}
-                {moment.unix(flight.aTimeUTC).format("YYYY-MM-DD HH:mm")}
+                {moment.unix(flight.aTimeUTC).format("YDD/MM/YYYY HH:mm")}
               </p>
               <p>
-                Fly airlines:
+                Airlines companies:
                 {flight &&
                   flight.airlines.map((company) => (
                     <small key={company}> {company} </small>
                   ))}
               </p>
-              <p>Fly duration: {flight.fly_duration} </p>
+              <p>Duration: {flight.fly_duration} </p>
               <p>Price: {flight.price} €</p>
               {flight.availability.seats && (
                 <p>

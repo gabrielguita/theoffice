@@ -185,7 +185,7 @@ const SearchFlightDetails = (props) => {
               </p>
               <p>
                 Arrivals:{" "}
-                {moment.unix(flight.aTimeUTC).format("YDD/MM/YYYY HH:mm")}
+                {moment.unix(flight.aTimeUTC).format("DD/MM/YYYY HH:mm")}
               </p>
               <p>
                 Airlines companies:

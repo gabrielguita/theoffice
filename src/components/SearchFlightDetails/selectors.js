@@ -12,13 +12,13 @@ const makeSelectIsLoading = () =>
   );
 
 const makeSelectError = () =>
-  createSelector(selectShow, (substate) => ({
+  createSelector(selectFlight, (substate) => ({
     error: get(substate, "getFlights.error", null),
     msg: get(substate, "getFlights.flights.message", null),
   }));
 
 const makeSelectFlights = () =>
-  createSelector(selectShow, (substate) => {
+  createSelector(selectFlight, (substate) => {
     const flights = [];
     const allFlights = get(substate, "getFlights.flights.data", null);
 

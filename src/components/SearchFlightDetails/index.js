@@ -153,7 +153,6 @@ const SearchFlightDetails = (props) => {
                 label="To"
                 className={classes.flightTo}
                 onChange={handleChangeDate}
-                defaultValue={moment()}
                 type="date"
                 InputLabelProps={{
                   shrink: true,

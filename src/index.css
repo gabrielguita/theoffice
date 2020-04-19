@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #fff;
+}
+
+h1 {
+  margin: 0px 0 16px 0;
+  font-size: 22px;
+  font-family: "Lato";
+  letter-spacing: 0.5px;
+  font-weight: 100;
+}
+
+p {
+  font-weight: 100;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+}
+
+b {
+  font-weight: 400;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+table {
+  width: 100%;
+}
+
+@media (min-width: 375px) {
+  body {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}

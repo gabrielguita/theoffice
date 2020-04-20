@@ -32,8 +32,8 @@ const getCity = (data) => {
 
 const toCelsius = (f) => Math.trunc((5 / 9) * (f - 32));
 const formatDate = (date) => moment(date).format("DD/MM/YYYY");
-const forecastIcon = (icon) => {
-  return icon.toString().length === 1 ? `${0 + icon}` : icon;
+const forecastIcon = (i) => {
+  return i.toString().length === 1 ? `${"0" + i}` : i;
 };
 
 const SearchWeatherDetails = (props) => {
@@ -72,8 +72,8 @@ const SearchWeatherDetails = (props) => {
                   />
                 </p>
                 <p>
-                  <strong>Night: </strong> {forecast.Day.PrecipitationType} /{" "}
-                  {forecast.Day.PrecipitationIntensity}
+                  <strong>Night: </strong> {forecast.Night.PrecipitationType} /{" "}
+                  {forecast.Night.PrecipitationIntensity}
                   <img
                     alt="night"
                     src={`https://developer.accuweather.com/sites/default/files/${forecastIcon(
@@ -86,11 +86,11 @@ const SearchWeatherDetails = (props) => {
                 </p>
                 <p>
                   Temperature minimum:{" "}
-                  {toCelsius(forecast.Temperature.Minimum.Value)}
+                  {toCelsius(forecast.Temperature.Minimum.Value)} °C
                 </p>
                 <p>
                   Temperature maximum:{" "}
-                  {toCelsius(forecast.Temperature.Maximum.Value)}
+                  {toCelsius(forecast.Temperature.Maximum.Value)} °C
                 </p>
               </li>
             ))}
